@@ -1,4 +1,4 @@
-🌿 Tree Species AI Classifier & Forestry Assistant
+<h1><b><i>🌿 Tree Species AI Classifier & Forestry Assistant</i></b></h1>
 <div align="center">
 
 
