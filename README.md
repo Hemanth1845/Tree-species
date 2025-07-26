@@ -1,207 +1,69 @@
-<h1><b><i>🌿 Tree Species AI Classifier & Forestry Assistant</i></b></h1>
+# 🌳 Tree Species Classification & Intelligence Assistant
+
 <div align="center">
 
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red?logo=streamlit&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-blue?logo=scikitlearn&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![GitHub Stars](https://img.shields.io/github/stars/SatyamPandey-07/TREE_SPECIES_CLASSIFICATION?style=social)
 
+*An advanced AI-powered web application for tree species identification, location-based recommendations, and intelligent forestry insights using machine learning and computer vision.*
 
-
-
+[🚀 Quick Start](#-quick-start) • [📖 Features](#-features--capabilities) • [🧠 ML Architecture](#-machine-learning-architecture) • [📋 Setup Guide](#-complete-setup--usage-guide) • [🤝 Contributing](#-contributing)
 
 </div>
-📌 Project Summary
-Tree Species AI Classifier is an intelligent, web-based tool for identifying tree species from images and location data. Leveraging deep learning and geospatial analysis, it empowers users to:
 
-Classify tree images using a custom-trained CNN
+## 📑 Table of Contents
 
-Recommend species based on GPS and environment
+- [🎯 Overview](#-overview)
+- [🚀 Quick Start](#-quick-start)
+- [✨ Features & Capabilities](#-features--capabilities)
+- [�️ Dataset & Data Sources](#️-dataset--data-sources)
+- [🧠 Machine Learning Architecture](#-machine-learning-architecture)
+- [🛠️ Technical Implementation](#️-technical-implementation)
+- [📋 Complete Setup & Usage Guide](#-complete-setup--usage-guide)
+- [🎯 Usage Examples](#-usage-examples)
+- [📈 Performance Metrics & Limitations](#-performance-metrics--limitations)
+- [🚀 Deployment Options](#-deployment-options)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📧 Contact & Support](#-contact--support)
 
-Explore species distributions across cities
+---
 
-Gain insights from over 1.3M+ trees across the U.S.
+## 🎯 Overview
 
-Ideal for urban forestry planners, botanists, environmental scientists, and hobbyists.
+The **Tree Species Classification & Intelligence Assistant** is a comprehensive machine learning solution that combines:
+- **🌍 Location Intelligence**
+- **🔍 Species Discovery**
+- **📸 Image Classification**
+- **📊 Data Analytics**
 
-🔥 Key Highlights
-📷 AI-Powered Image Recognition (30 species)
+Built with modern ML frameworks and deployed as an interactive web application.
 
-📍 Location-Based Prediction Engine
+---
 
-📊 Interactive Distribution Visualizations
+## DEMO Screen Shots
+<img src="#" alt="Screenshot 1" width="800"/>
+<img src="#" alt="Screenshot 2" width="800"/>
+<img src="#" alt="Screenshot 3" width="800"/>
+<img src="#" alt="Screenshot 4" width="800"/>
 
-🌎 Real-Time Tree Analytics
+---
 
-💡 Streamlit Web Interface for seamless UX
+## 🚀 Quick Start
 
-🚀 Get Started Quickly
-🧰 Requirements
-Python 3.13+
+### Prerequisites
+- Python 3.13+
+- pip package manager
+- 4GB+ RAM (for CNN model loading)
 
-pip package manager
+### Installation & Setup
 
-At least 4GB RAM (recommended for model usage)
-
-⚙️ Setup
-bash
-Copy
-Edit
-# Clone the repository
+```bash
 git clone https://github.com/SatyamPandey-07/TREE_SPECIES_CLASSIFICATION.git
 cd TREE_SPECIES_CLASSIFICATION
-
-# Install dependencies
 pip install -r requirements.txt
-▶️ Launch the App
-bash
-Copy
-Edit
 streamlit run streamlit_integrated.py
-Visit http://localhost:8501 in your browser.
-
-🧠 AI Models & Tech Stack
-🗺️ Location Recommender (KNN)
-Input: [Latitude, Longitude, Diameter, Native, City, State]
-
-Model: K-Nearest Neighbors using geospatial clustering
-
-Output: Top 5 most likely tree species in that area
-
-🧠 CNN Image Classifier
-Architecture: Conv2D layers → MaxPooling → Dropout → Dense
-
-Input: 224×224 tree image
-
-Output: Species name with confidence score
-
-Accuracy: ~26% (real-world dataset, 1.4K+ images)
-
-🧪 Tools Used
-TensorFlow, Keras, scikit-learn, Pandas, NumPy, Joblib
-
-Streamlit for web UI
-
-ImageDataGenerator for augmentation
-
-🗃️ Dataset Overview
-🌳 Tree Metadata
-Source: 50+ U.S. city tree inventories
-
-Size: 1.38 million trees
-
-Features: Species name, GPS, native flag, DBH, city/state
-
-🖼️ Image Dataset
-Classes: 30 common North American species
-
-Images: 1,454 (augmented)
-
-Format: Folder-per-species
-
-Resolution: 224x224 RGB
-
-📁 Project Layout
-bash
-Copy
-Edit
-TREE_SPECIES_CLASSIFICATION/
-├── streamlit_integrated.py       # Main app
-├── requirements.txt              # Python packages
-├── tree_CNN.ipynb                # CNN training notebook
-├── 5M_trees.ipynb                # Location model training
-├── models/
-│   ├── basic_cnn_tree_species.h5
-│   ├── nn_model.joblib
-│   ├── scaler.joblib
-│   └── tree_data.pkl
-└── docs/
-    ├── performance_metrics.png
-    └── cnn_architecture.png
-🎮 How to Use
-🧭 1. Predict via Location
-Enter:
-
-Latitude & Longitude
-
-Diameter at Breast Height (DBH)
-
-Native status
-
-City & State
-
-💡 You'll receive top 5 species with confidence.
-
-📷 2. Classify Image
-Upload:
-
-A tree image (leaf, bark, full tree)
-
-🧠 App returns:
-
-Top 3 predicted species
-
-Associated probabilities
-
-🌍 3. Explore Species Distribution
-Search for a species to visualize:
-
-Geographic spread
-
-City-wise occurrence
-
-📉 Model Performance Snapshot
-Model	Accuracy	Notes
-CNN Classifier	~26%	Real-world, low-data setup
-KNN Recommender	N/A	Fast lookup, non-probabilistic
-
-🛠 Deployment Options
-💻 Run Locally
-bash
-Copy
-Edit
-streamlit run streamlit_integrated.py
-🐳 Docker
-dockerfile
-Copy
-Edit
-FROM python:3.13
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-CMD ["streamlit", "run", "streamlit_integrated.py"]
-🤝 Want to Contribute?
-We welcome contributions of all kinds! Here's how:
-
-Fork the repo
-
-Create a branch: git checkout -b my-feature
-
-Make changes and commit: git commit -am 'Add new feature'
-
-Push: git push origin my-feature
-
-Open a pull request!
-
-✅ Add unit tests and update docs if relevant.
-
-📜 License
-Licensed under the MIT License.
-See LICENSE for details.
-
-📬 Contact & Support
-Author: Satyam Pandey
-Project Repo: TREE_SPECIES_CLASSIFICATION
-
-Have a question, bug report, or feature idea?
-Open an issue or start a discussion.
-
-🌱 Acknowledgments
-City Tree Inventories from U.S. municipalities
-
-TensorFlow & Streamlit communities
-
-Open-source botanical image datasets
-
-<div align="center">
-⭐ If you like this project, give it a star and share!
-🌳 Built to promote smarter, greener urban spaces.
-
-</div>
-Let me know if you’d like this turned into a .md file or need a version tailored for GitHub Pages!
